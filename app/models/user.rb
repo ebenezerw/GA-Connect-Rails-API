@@ -22,5 +22,5 @@ class User < ApplicationRecord
             user.profile_url = auth['info']['urls']['public_profile']
         end
     end
-    has_many :users
+    has_many :courses
 end

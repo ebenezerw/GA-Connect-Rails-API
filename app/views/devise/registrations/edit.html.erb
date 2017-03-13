@@ -8,6 +8,31 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :headline %><br />
+    <%= f.text_field :headline %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position_title %><br />
+    <%= f.text_field :position_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position_company %><br />
+    <%= f.text_field :position_company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_id%><br />
+    <%= f.collection_check_boxes :course_id, Course.all, :id, :course_name %>
+  </div>
+
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

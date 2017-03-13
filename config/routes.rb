@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
 
   root 'main#index'
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks",
+                                                              :registrations => 'users/registrations'
+
+                                                            }
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
