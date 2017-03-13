@@ -17,15 +17,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
      super
    end
 
-   
+
    def update
      super
    end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
@@ -44,9 +44,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
-  # end
+  def configure_account_update_params
+  devise_parameter_sanitizer.permit(:account_update, keys: [:first_name]).append(:first_name)
+  end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
@@ -58,9 +58,5 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-  private
 
-  def user_params
-          params.require(:user).permit(:first_name, :headline, :position_title, :position_company, :course_id)
-        end
 end
