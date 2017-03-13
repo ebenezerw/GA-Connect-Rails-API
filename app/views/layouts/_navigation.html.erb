@@ -1,5 +1,5 @@
 <% if current_user %>
-<li>Hello, <%= link_to current_user.email, users_show_path(@user) %></li>
+<li>Hello, <%= current_user.email %></li>
 <li>Hello, <%= current_user.first_name %></li>
 <li>Hello, <%= current_user.last_name %></li>
 <li>Hello, <%= current_user.headline %></li>
