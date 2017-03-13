@@ -8,6 +8,8 @@ end
 # devise gem
 gem 'devise'
 
+gem 'omniauth-oauth2', '~> 1.3.1'
+
 #linked in gem
 gem 'omniauth-linkedin-oauth2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
