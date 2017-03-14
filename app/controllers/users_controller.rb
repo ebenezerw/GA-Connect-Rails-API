@@ -5,6 +5,10 @@ def index
   render json: @users.to_json, status: :ok
 end
 
+def new
+         # link to new destination page
+     end
+
   def show
           @user = User.find(params[:id])
           render json: @user

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :users
-  resources :courses
+resources :users
+
+resources :courses
 
   root 'main#index'
 
