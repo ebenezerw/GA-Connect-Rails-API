@@ -6,7 +6,7 @@ resources :students
 
 resources :courses
 
-  root 'main#index'
+
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks",
                                                               :registrations => 'users/registrations'
