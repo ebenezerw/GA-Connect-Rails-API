@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  headline: MyString
+  location: MyString
+  position_title: MyString
+  position_company: MyString
+  picture_url: MyString
+  profile_url: MyString
+  mentor: false
+  user_type: MyString
+  user_skills: MyString
+
+two:
+  full_name: MyString
+  headline: MyString
+  location: MyString
+  position_title: MyString
+  position_company: MyString
+  picture_url: MyString
+  profile_url: MyString
+  mentor: false
+  user_type: MyString
+  user_skills: MyString
