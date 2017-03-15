@@ -12,5 +12,16 @@ def show
   render json: @course
 end
 
+def update
+  @course = Course.find(params[:id])
+  @course.update!(course_params)
+  render json: @course
+end
+
+private
+def course_params
+  params.require(:course).permit(:course_name)
+end
+
 
 end
